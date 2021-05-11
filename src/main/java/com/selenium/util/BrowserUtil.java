@@ -44,8 +44,9 @@ public class BrowserUtil {
             driver = new ChromeDriver();
             return driver;
         } else if (AllConstant.EDGE.equals(browserDriver)) {
-            System.setProperty(AllConstant.EDGE_DRIVER, AllConstant.EDGE_DRIVER_ADDRESS);
-            log.info(AllConstant.EDGE + "浏览器");
+           // System.setProperty(AllConstant.EDGE_DRIVER, AllConstant.EDGE_DRIVER_ADDRESS);
+            System.setProperty(AllConstant.EDGE_DRIVER, "/opt");
+            //log.info(AllConstant.EDGE + "浏览器");
             driver = new EdgeDriver();
             return driver;
         } else if (AllConstant.FIREFOX.equals(browserDriver)) {
