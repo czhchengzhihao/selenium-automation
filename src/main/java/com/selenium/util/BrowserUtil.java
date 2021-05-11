@@ -41,12 +41,12 @@ public class BrowserUtil {
         if (AllConstant.CHROME.equals(browserDriver)) {
             System.setProperty(AllConstant.CHROME_DRIVER, AllConstant.CHROME_DRIVER_ADDRESS);
             log.info(AllConstant.CHROME + "浏览器");
-            driver = new EdgeDriver();
+            driver = new ChromeDriver();
             return driver;
         } else if (AllConstant.EDGE.equals(browserDriver)) {
             System.setProperty(AllConstant.EDGE_DRIVER, AllConstant.EDGE_DRIVER_ADDRESS);
             log.info(AllConstant.EDGE + "浏览器");
-            driver = new ChromeDriver();
+            driver = new EdgeDriver();
             return driver;
         } else if (AllConstant.FIREFOX.equals(browserDriver)) {
             System.setProperty(AllConstant.FIREFOX_DRIVER, AllConstant.FIREFOX_DRIVER_ADDRESS);

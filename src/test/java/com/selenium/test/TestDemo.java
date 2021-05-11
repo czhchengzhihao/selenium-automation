@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 public class TestDemo {
     @Test
     public void test1() throws InterruptedException {
-        WebDriver driver = BrowserUtil.openBrowser("firefox");
+        WebDriver driver = BrowserUtil.openBrowser("chrome");
         driver.get("https://www.baidu.com");
         //获取输入框元素，并输入值
         driver.findElement(By.id("kw")).sendKeys("我爱学习");
