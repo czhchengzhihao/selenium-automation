@@ -30,17 +30,20 @@ public class BrowserUtil {
      */
     private static final Logger log = Logger.getLogger(Test.class);
     public static WebDriver driver;
-/**
- * @Author ChengZhiHao
- * @Description //TODO 支持 Firefox，Chrome,Edge浏览器
- * @Date 19:15 2021/5/11
- * @Param [browserDriver]
- * @return org.openqa.selenium.WebDriver
- **/
+
+    /**
+     * @return org.openqa.selenium.WebDriver
+     * @Author ChengZhiHao
+     * @Description //TODO 支持 Firefox，Chrome,Edge浏览器
+     * @Date 19:15 2021/5/11
+     * @Param [browserDriver]
+     **/
     public static WebDriver openBrowser(String browserDriver) {
         if (AllConstant.CHROME.equals(browserDriver)) {
-            System.setProperty(AllConstant.CHROME_DRIVER, AllConstant.CHROME_DRIVER_ADDRESS);
-            log.info(AllConstant.CHROME + "浏览器");
+            //System.setProperty(AllConstant.CHROME_DRIVER, AllConstant.CHROME_DRIVER_ADDRESS);
+            //log.info(AllConstant.CHROME + "浏览器");
+
+            System.setProperty(AllConstant.CHROME_DRIVER, "/opt/driver/chromedriver");
             driver = new ChromeDriver();
             return driver;
         } else if (AllConstant.EDGE.equals(browserDriver)) {
