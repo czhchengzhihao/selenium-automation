@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="技术服务中心">
+    <test name="apitechflowcontroller">
+
+        <classes>
+            <class name="com.selenium.test.TestDemo"></class>
+        </classes>
+    </test>
+    <!--   <test name="apitechorderchangecontroller">
+           <classes>
+               &lt;!&ndash;<class name="com.anheng.apitechorderchangecontroller.Dispatch"></class>&ndash;&gt;
+
+           </classes>
+       </test>-->
+    <listeners>
+        <listener class-name="com.czh.report.ExtentTestReport"/>
+    </listeners>
+</suite>
