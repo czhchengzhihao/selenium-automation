@@ -21,11 +21,12 @@ public class AllConstant {
     public static final String CHROME_DRIVER = "webdriver.chrome.driver";
     public static final String EDGE_DRIVER = "webdriver.edge.driver";
     public static final String FIREFOX_DRIVER = "webdriver.gecko.driver";
+
     /**
      * 浏览器驱动地址
      */
     public static final String CHROME_DRIVER_ADDRESS = "./src/main/resources/driver/chromedriver.exe";
-    public static final String EDGE_DRIVER_ADDRESS = "./src/main/resources/driver/msedgedriver.exe";
+    //public static final String EDGE_DRIVER_ADDRESS = "./src/main/resources/driver/msedgedriver.exe";
     public static final String FIREFOX_DRIVER_ADDRESS = "./src/main/resources/driver/geckodriver.exe";
-
+    public static final String EDGE_DRIVER_ADDRESS = "./src/main/resources/driver/msedgedriver";
 }
