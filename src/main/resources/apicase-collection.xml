@@ -15,6 +15,6 @@
            </classes>
        </test>-->
     <listeners>
-        <listener class-name="com.czh.report.ExtentTestReport"/>
+        <listener class-name="com.selenium.report.ExtentTestReport"/>
     </listeners>
 </suite>
