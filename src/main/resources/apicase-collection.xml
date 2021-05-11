@@ -3,7 +3,6 @@
 
 <suite name="技术服务中心">
     <test name="apitechflowcontroller">
-
         <classes>
             <class name="com.selenium.test.TestDemo"></class>
         </classes>

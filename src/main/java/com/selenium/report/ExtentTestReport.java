@@ -27,7 +27,7 @@ public class ExtentTestReport implements IReporter {
      * 生成的路径以及文件名
      */
     private static final String OUTPUT_FOLDER = "test-output/";
-    private static final String FILE_NAME = "apiTestReport.html";
+    private static final String FILE_NAME = "seleniumTestReport.html";
 
     private ExtentReports extent;
 
