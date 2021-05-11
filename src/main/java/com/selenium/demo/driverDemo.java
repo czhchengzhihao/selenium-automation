@@ -61,7 +61,6 @@ public class driverDemo {
 
     public static void main(String[] args) throws InterruptedException {
         //加载驱动，后面的路径自己要选择正确，也可以放在本地
-
         System.setProperty("webdriver.edge.driver", "./src/main/resources/driver/msedgedriver.exe");
         //初始化一个谷歌浏览器实例，实例名称叫driver
         WebDriver driver = new EdgeDriver();
