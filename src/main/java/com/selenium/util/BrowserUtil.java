@@ -2,9 +2,9 @@ package com.selenium.util;
 
 import com.selenium.constant.AllConstant;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
@@ -40,8 +40,10 @@ public class BrowserUtil {
      **/
     public static WebDriver openBrowser(String browserDriver) {
         if (AllConstant.CHROME.equals(browserDriver)) {
-            System.setProperty(AllConstant.CHROME_DRIVER, "src/main/resources/driver/chromedriver");
+            System.setProperty(AllConstant.CHROME_DRIVER, AllConstant.CHROME_DRIVER_ADDRESS);
             log.info(AllConstant.CHROME + "浏览器");
+            ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.addArguments("-headless");
             driver = new ChromeDriver();
             return driver;
         } else if (AllConstant.EDGE.equals(browserDriver)) {
@@ -63,3 +65,6 @@ public class BrowserUtil {
 }
 
 
+//创建无Chrome无头参数
+    /*ChromeOptions chromeOptions=new ChromeOptions();
+        chromeOptions.addArguments("-headless");*/
