@@ -31,7 +31,7 @@ public class TestDemo {
     @Test
     public void test2() throws InterruptedException {
         // 设置chromedriver路径
-        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/opt/driver/chromedriver");
         //创建一个参数对象，用来控制chrome以无界面模式打开
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
