@@ -50,6 +50,17 @@
             <artifactId>extentreports</artifactId>
             <version>3.0.6</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-firefox-driver</artifactId>
+            <version>3.14.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>3.14.0</version>
+        </dependency>
     </dependencies>
     <!--在build中配置resources,来防止我们资源导出失败-->
     <build>

@@ -40,7 +40,7 @@ public class BrowserUtil {
      **/
     public static WebDriver openBrowser(String browserDriver) {
         if (AllConstant.CHROME.equals(browserDriver)) {
-            System.setProperty(AllConstant.CHROME_DRIVER, "src/main/resources/driver/chromedriver");
+            System.setProperty(AllConstant.CHROME_DRIVER, AllConstant.CHROME_DRIVER_ADDRESS);
             log.info(AllConstant.CHROME + "浏览器");
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.addArguments("-headless");
@@ -63,8 +63,3 @@ public class BrowserUtil {
     }
 
 }
-
-
-//创建无Chrome无头参数
-    /*ChromeOptions chromeOptions=new ChromeOptions();
-        chromeOptions.addArguments("-headless");*/
