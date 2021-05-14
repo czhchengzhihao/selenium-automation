@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 public class TestDemo {
     @Test
     public void test1() throws InterruptedException {
-        WebDriver driver = BrowserUtil.openBrowser("chrome");
+        WebDriver driver = BrowserUtil.openBrowser("firefox");
         driver.get("https://www.baidu.com");
         //获取输入框元素，并输入值
         driver.findElement(By.id("kw")).sendKeys("我爱学习");
@@ -31,7 +31,7 @@ public class TestDemo {
     @Test
     public void test2() throws InterruptedException {
         // 设置chromedriver路径
-        System.setProperty("webdriver.chrome.driver", "/opt/driver/chromedriver");
+        System.setProperty("webdriver.gecko.driver", "/opt/driver/geckodriver");
         //创建一个参数对象，用来控制chrome以无界面模式打开
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
