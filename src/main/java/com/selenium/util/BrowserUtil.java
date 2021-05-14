@@ -40,10 +40,8 @@ public class BrowserUtil {
      **/
     public static WebDriver openBrowser(String browserDriver) {
         if (AllConstant.CHROME.equals(browserDriver)) {
-            System.setProperty(AllConstant.CHROME_DRIVER, "/opt/driver/chromedriver");
+            System.setProperty(AllConstant.CHROME_DRIVER, AllConstant.CHROME_DRIVER_ADDRESS);
             log.info(AllConstant.CHROME + "浏览器");
-            ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.addArguments("-headless");
             driver = new ChromeDriver();
             return driver;
         } else if (AllConstant.EDGE.equals(browserDriver)) {
@@ -53,11 +51,6 @@ public class BrowserUtil {
             return driver;
         } else if (AllConstant.FIREFOX.equals(browserDriver)) {
             System.setProperty(AllConstant.FIREFOX_DRIVER, "/opt/driver/geckodriver");
-            //创建一个参数对象，用来控制chrome以无界面模式打开
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--headless");
-            options.addArguments("--disable-gpu");
-            options.addArguments("--no-sandbox");
             log.info(AllConstant.FIREFOX + "浏览器");
             driver = new FirefoxDriver();
             return driver;
