@@ -41,6 +41,11 @@ public class BrowserUtil {
     public static WebDriver openBrowser(String browserDriver) {
         if (AllConstant.CHROME.equals(browserDriver)) {
             System.setProperty(AllConstant.CHROME_DRIVER, "/opt/driver/chromedriver");
+            //创建一个参数对象，用来控制chrome以无界面模式打开
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--no-sandbox");
             log.info(AllConstant.CHROME + "浏览器");
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.addArguments("-headless");
